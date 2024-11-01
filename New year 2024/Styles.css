@@ -1,0 +1,106 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    background: radial-gradient(circle, #0d0f13, #1a1a2e);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: none; /* Hide default cursor */
+    font-family: 'Orbitron', sans-serif;
+}
+
+.card-container {
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    color: #00ff99;
+}
+
+.neon-title {
+    font-size: 3em;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; text-shadow: 0 0 5px #ff00ff, 0 0 20px #ff00ff; }
+    50% { opacity: 0.8; text-shadow: 0 0 30px #00ff99, 0 0 40px #ff6600; }
+}
+
+.neon-text {
+    font-size: 1.2em;
+    color: #c0c0c0;
+    margin-bottom: 40px;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px #00ff99; }
+    50% { text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff6600; }
+}
+
+.neon-button {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #00ff99, #ff00ff);
+    color: #0d0f13;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    animation: button-glow 1.5s infinite alternate;
+}
+
+@keyframes button-glow {
+    0%, 100% { box-shadow: 0px 0px 10px #ff00ff; }
+    50% { box-shadow: 0px 0px 20px #00ff99; }
+}
+
+.neon-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px #ff6600;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff00ff;
+    border-radius: 50%;
+    background: rgba(255, 0, 255, 0.1);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: transform 0.15s ease;
+}
+body {
+    background: #0d0f13;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Particle Styles */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 0, 255, 0.8);
+    pointer-events: none;
+    animation: move 5s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+}
